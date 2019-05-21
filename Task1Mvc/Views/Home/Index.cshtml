@@ -1,0 +1,22 @@
+﻿@using Task1Mvc.Models
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+<div class="content">
+    @foreach (var elem in ListItems.LoadArticles())
+    {
+        <div class="article">
+            <div class="article-name">
+                <h1>@elem.Name</h1>
+            </div>
+            <div class="article-date text-info">
+                @elem.Date
+            </div>
+            <div class="article-text text-info">
+                @elem.Content
+            </div>
+            <br />
+        </div>
+    }
+</div>
